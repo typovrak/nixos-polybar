@@ -12,7 +12,7 @@ in {
 include-file = "${home}/.config/polybar/mocha.ini"
 
 [colors]
-background = \\${colors.base}
+background = ''\${colors.base}
 background-alt = \\${colors.surface0}
 foreground = \\${colors.text}
 primary = \\${colors.green}
