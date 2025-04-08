@@ -12,24 +12,24 @@ in {
 include-file = "${home}/.config/polybar/mocha.ini"
 
 [colors]
-background = ${colors.base}
-background-alt = ${colors.surface0}
-foreground = ${colors.text}
-primary = ${colors.green}
-secondary = ${colors.red}
-alert = ${colors.red}
-disabled = ${colors.overlay0}
+background = \${colors.base}
+background-alt = \${colors.surface0}
+foreground = \${colors.text}
+primary = \${colors.green}
+secondary = \${colors.red}
+alert = \${colors.red}
+disabled = \${colors.overlay0}
 
 [bar/main]
 width = 100%
 height = 18pt
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = \${colors.background}
+foreground = \${colors.foreground}
 line-size = 3pt
 padding-right = 1
 module-margin = 1
 separator = |
-separator-foreground = ${colors.disabled}
+separator-foreground = \${colors.disabled}
 font-0 = JetBrainsMono Nerd Font:pixelsize=10;1
 modules-left = xworkspaces xwindow
 modules-right = cpu temperature memory speedtest-down speedtest-up audio brightnessctl wlan battery date
@@ -40,16 +40,16 @@ enable-ipc = true
 [module/xworkspaces]
 type = internal/xworkspaces
 label-active = %name%
-label-active-background = ${colors.background-alt}
-label-active-underline= ${colors.primary}
+label-active-background = \${colors.background-alt}
+label-active-underline= \${colors.primary}
 label-active-padding = 1
 label-occupied = %name%
 label-occupied-padding = 1
 label-urgent = %name%
-label-urgent-background = ${colors.alert}
+label-urgent-background = \${colors.alert}
 label-urgent-padding = 1
 label-empty = %name%
-label-empty-foreground = ${colors.disabled}
+label-empty-foreground = \${colors.disabled}
 label-empty-padding = 1
 
 [module/xwindow]
@@ -88,21 +88,21 @@ interval = 1
 date = %H:%M
 date-alt = %Y-%m-%d %H:%M:%S
 label = %date%
-label-foreground = ${colors.primary}
+label-foreground = \${colors.primary}
 
 [module/brightnessctl]
 type = custom/script
 exec = ${home}/.config/polybar/brightnessctl.sh
 interval = 1
 label = %{F#a6e3a1}LUM%{F-} %output%
-label-foreground = ${colors.foreground}
+label-foreground = \${colors.foreground}
 
 [speedtest-base]
 type = internal/network
 interface = wlan0
 interface-type = wireless
 interval = 1
-label-foreground = ${colors.foreground}
+label-foreground = \${colors.foreground}
 
 [module/speedtest-down]
 inherit = speedtest-base
