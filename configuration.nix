@@ -10,7 +10,6 @@ in {
 		chown ${username}:${group} ${home}/.config
 		chmod 700 ${home}/.config
 
-
 		rm -rf ${home}/.config/polybar
 		mkdir ${home}/.config/polybar
 		chown ${username}:${group} ${home}/.config/polybar
