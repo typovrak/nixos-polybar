@@ -8,12 +8,13 @@ in {
 	system.activationScripts.polybar = ''
 		mkdir -p ${home}/.config
 		chown ${username}:${group} ${home}/.config
-		chmod 755 ${home}/.config
+		chmod 700 ${home}/.config
+
 
 		rm -rf ${home}/.config/polybar
 		mkdir ${home}/.config/polybar
 		chown ${username}:${group} ${home}/.config/polybar
-		chmod 755 ${home}/.config/polybar
+		chmod 700 ${home}/.config/polybar
 
 		cp ${home}/.config/polybar/config.ini
 		chown ${username}:${group} ${home}/.config/polybar/config.ini
