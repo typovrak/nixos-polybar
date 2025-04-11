@@ -30,6 +30,10 @@ in {
 		cp ${./brightnessctl.sh} ${home}/.config/polybar/brightnessctl.sh
 		chown ${username}:${group} ${home}/.config/polybar/brightnessctl.sh
 		chmod 700 ${home}/.config/polybar/brightnessctl.sh
+
+		cp ${./obs.sh} ${home}/.config/polybar/obs.sh
+		chown ${username}:${group} ${home}/.config/polybar/obs.sh
+		chmod 700 ${home}/.config/polybar/obs.sh
 	'';
 
 	environment.systemPackages = with pkgs; [
