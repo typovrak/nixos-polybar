@@ -3,7 +3,7 @@
 vol_raw=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null)
 
 if [ -z "$vol_raw" ] || echo "$vol_raw" | grep -q "Translate id"; then
-    echo "%{F#a6e3a1}N/A%{F-}"
+    echo "%{F#a6e3a1}VOL%{F-} N/A"
     exit 0
 fi
 
