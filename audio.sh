@@ -7,8 +7,14 @@ if [ -z "$vol_raw" ]; then
     exit 0
 fi
 
-mute=$(echo "$vol_raw" | grep -q MUTED && echo true || echo false)
 percent=$(echo "$vol_raw" | grep -o '[0-9]*\.[0-9]*' | awk '{printf "%d", $1 * 100}')
+
+if [ -z "$vol_raw" ]; then
+    echo "%{F#a6e3a1}VOL%{F-} N/A"
+    exit 0
+fi
+
+mute=$(echo "$vol_raw" | grep -q MUTED && echo true || echo false)
 
 if [ "$mute" = "true" ]; then
     echo "%{F#a6e3a1}MUTED%{F-}"
