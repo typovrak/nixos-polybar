@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "TESTTTTTTTTTT"
+exit 0
+
 vol_raw=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
 
 if [ -z "$vol_raw" ]; then
